@@ -22,8 +22,18 @@ public class Controller {
     }
 
     @RequestMapping(value = "population/{id}", method = RequestMethod.GET)
-    public Paises findById(@PathVariable int id) throws Exception {
+    public Paises findByPopulation(@PathVariable int id) throws Exception {
         return service.findByPopulation(id);
+    }
+
+    @RequestMapping(value = "find-all", method = RequestMethod.GET)
+    public Iterable<Paises> findAll() throws Exception {
+        return service.findAll();
+    }
+
+    @RequestMapping(value = "delete/{id}", method = RequestMethod.DELETE)
+    public Boolean delete(@PathVariable Long id) throws Exception {
+        return service.delete(id);
     }
 
 }

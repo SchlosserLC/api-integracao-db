@@ -23,4 +23,16 @@ public class Service {
         return countryRepository.findByPopulation(population).orElse(null);
     }
 
+    public Iterable<Paises> findAll() {
+        return countryRepository.findAll();
+    }
+
+    public boolean delete(Long id) {
+        Paises result = this.findById(id);
+        if (result != null && result.getPopulation() < 1000000) {
+            countryRepository.deleteById(id);
+            return true;
+        }
+        return false;
+    }
 }

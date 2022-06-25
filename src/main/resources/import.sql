@@ -1,4 +1,4 @@
-INSERT INTO countries(name, population) VALUES('China', 1382050000);
+INSERT INTO countries(name, population) VALUES('China', 13820);
 INSERT INTO countries(name, population) VALUES('India', 1313210000);
 INSERT INTO countries(name, population) VALUES('USA', 324666000);
 INSERT INTO countries(name, population) VALUES('Indonesia', 260581000);
